@@ -15,8 +15,8 @@ export default function FeaturedCollection() {
   return (
     <section className="container" aria-labelledby="featured-collection-title">
       <Reveal>
-        <div className="relative grid min-h-[330px] overflow-hidden rounded-md bg-[#123c3d] md:grid-cols-[3fr_2fr] lg:min-h-[360px]">
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_10%_50%,#245453,transparent_70%)]" />
+        <div className="relative grid min-h-[330px] overflow-hidden rounded-md bg-[#006b38] md:grid-cols-[3fr_2fr] lg:min-h-[360px]">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_10%_50%,#085f29,transparent_70%)]" />
           <div className="relative z-10 min-w-0 px-7 py-12 text-white md:px-10 md:py-14 lg:px-12">
             <p className="mb-4 text-base text-[#e4c77f]">
               The fiction collection
@@ -38,8 +38,8 @@ export default function FeaturedCollection() {
               <ChevronRight size={12} />
             </Link>
           </div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[46%] overflow-hidden opacity-30 sm:block md:opacity-100">
-            <div className="absolute -right-20 -top-28 w-[560px] lg:w-[700px]">
+          <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[56%] overflow-hidden opacity-20 sm:block md:opacity-100">
+            <div className="absolute -right-20 -top-40 w-[560px] lg:w-[700px]">
               <div className="feature-books">
                 {covers.map((slug) => (
                   <div

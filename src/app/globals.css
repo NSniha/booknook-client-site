@@ -342,7 +342,7 @@
   [class~="text-[24px]"], [class~="text-[26px]"] { font-size: 22px; }
   [class~="text-[28px]"] { font-size: 24px; }
   [class~="text-[30px]"] { font-size: 26px; }
-  .text-hero-title { font-size: 32px; line-height: 1.15; }
+  .text-hero-title { font-size: 42px; line-height: 1.15; }
   .text-page { font-size: 32px; line-height: 1.15; }
   .section-title, .text-section { font-size: 28px; line-height: 1.2; }
   .section-title.journal-section-title { font-size: 26px; }

@@ -51,7 +51,7 @@ export default function HeroSlider() {
                       </p>
                       <Link
                         href="/books"
-                        className="inline-flex min-h-12 items-center gap-4 rounded-full bg-white px-6 py-3 text-base font-medium text-[#183325] shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                        className="inline-flex min-h-12 items-center gap-4 rounded-full bg-[#006b38] px-6 py-3 text-base font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
                       >
                         Browse Books
                       </Link>

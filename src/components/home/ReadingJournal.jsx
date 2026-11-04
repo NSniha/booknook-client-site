@@ -36,8 +36,8 @@ export default function ReadingJournal() {
                     className="object-cover transition duration-700 group-hover:scale-105"
                   />
                 </button>
-                <p className="mb-2 flex items-center gap-2 text-base uppercase tracking-wider text-accent">
-                  <BookOpen size={11} />
+                <p className="mb-2 flex items-center gap-2 text-[14.2px] uppercase tracking-wider text-accent">
+                  <BookOpen size={16} />
                   {article.category}
                   <span className="ml-1 text-muted-foreground">
                     •{" "}
@@ -50,7 +50,7 @@ export default function ReadingJournal() {
                     min read
                   </span>
                 </p>
-                <h3 className="journal-card-title font-display font-semibold">
+                <h3 className="journal-card-title font-display font-semibold lg:text-[22px]! text-[18px]!">
                   <button
                     type="button"
                     onClick={() => setSelected(article)}

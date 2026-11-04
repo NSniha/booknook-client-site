@@ -30,7 +30,7 @@ export default function TopCategories() {
                     className="relative text-foreground/75"
                   />
                 </span>
-                <h3 className="font-display text-[26px] font-semibold lg:text-[28px]">{name}</h3>
+                <h3 className="font-display text-[18px] font-semibold lg:text-[22px]">{name}</h3>
                 <p className="mt-2 text-base text-muted-foreground">
                   {label}
                 </p>
