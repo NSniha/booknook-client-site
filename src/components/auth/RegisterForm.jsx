@@ -23,48 +23,71 @@ export default function RegisterForm() {
   const [passwordTouched, setPasswordTouched] = useState(false);
   async function submit(event) {
     event.preventDefault();
+
     if (busy) return;
+
     setPasswordTouched(true);
+
     const form = new FormData(event.currentTarget);
-    const name = String(form.get("name")).trim();
-    const email = String(form.get("email")).trim();
-    const image = String(form.get("image")).trim();
+    const name = String(form.get("name") || "").trim();
+    const email = String(form.get("email") || "").trim();
+    const image = String(form.get("image") || "").trim();
+
     let validation = passwordError(password);
-    if (name.length < 2 || name.length > 80)
+
+    if (name.length < 2 || name.length > 80) {
       validation = "Your name should contain 2–80 characters.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       validation = "Enter a valid email address.";
-    else {
+    } else {
       try {
-        if (new URL(image).protocol !== "https:") throw new Error();
+        if (new URL(image).protocol !== "https:") {
+          throw new Error();
+        }
       } catch {
         validation = "Add a valid HTTPS photo URL.";
       }
     }
+
     if (validation) {
       setError(validation);
       toast.error(validation);
       return;
     }
+
     setBusy(true);
     setError("");
+
     try {
-      const { error: authError } = await authClient.signUp.email({
+      const { data, error: authError } = await authClient.signUp.email({
         name,
         email,
         password,
         image,
       });
-      if (authError)
+
+      if (authError) {
         throw new Error(
           authError.message || "We could not create your account.",
         );
-      toast.success("Your account is ready. Login to start your next chapter.");
-      router.push(`/login?callbackUrl=${encodeURIComponent(callbackURL)}`);
+      }
+
+      if (!data?.user) {
+        throw new Error("Registration failed. Please try again.");
+      }
+
+      toast.success("Your account is ready. Please log in.");
+
+      router.push(
+        `/login?callbackUrl=${encodeURIComponent(callbackURL)}`,
+      );
+
       router.refresh();
     } catch (err) {
-      setError(err.message || "Registration failed. Please try again.");
-      toast.error(err.message || "Registration failed.");
+      const message = err.message || "Registration failed. Please try again.";
+
+      setError(message);
+      toast.error(message);
     } finally {
       setBusy(false);
     }

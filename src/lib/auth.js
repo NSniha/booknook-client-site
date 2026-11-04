@@ -7,23 +7,32 @@ import { getDatabase } from "./db";
 import { passwordError } from "./validation";
 
 let instance;
+
 export function getAuth() {
   if (instance) return instance;
+
   const baseURL = (
     process.env.BETTER_AUTH_URL || "http://localhost:3000"
   ).replace(/\/$/, "");
+
   const secret = process.env.BETTER_AUTH_SECRET;
-  if (!secret || secret.length < 32)
+
+  if (!secret || secret.length < 32) {
     throw new Error(
       "Set BETTER_AUTH_SECRET to a random value of at least 32 characters.",
     );
+  }
+
   const { db, client } = getDatabase();
+
   instance = betterAuth({
     appName: "BookNook",
     baseURL,
     secret,
     trustedOrigins: [baseURL],
+
     database: mongodbAdapter(db, { client }),
+
     emailAndPassword: {
       enabled: true,
       minPasswordLength: 6,
@@ -31,7 +40,11 @@ export function getAuth() {
       requireEmailVerification: false,
       autoSignIn: false,
     },
-    emailVerification: { sendOnSignUp: false },
+
+    emailVerification: {
+      sendOnSignUp: false,
+    },
+
     socialProviders:
       process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET
         ? {
@@ -41,27 +54,45 @@ export function getAuth() {
             },
           }
         : {},
+
     hooks: {
       before: createAuthMiddleware(async (ctx) => {
         if (ctx.path === "/sign-up/email") {
           const error = passwordError(
-            typeof ctx.body?.password === "string" ? ctx.body.password : "",
+            typeof ctx.body?.password === "string"
+              ? ctx.body.password
+              : "",
           );
-          if (error) throw new APIError("BAD_REQUEST", { message: error });
+
+          if (error) {
+            throw new APIError("BAD_REQUEST", {
+              message: error,
+            });
+          }
         }
       }),
     },
+
     plugins: [
       jwt({
         jwt: {
           issuer: baseURL,
           audience: "booknook-api",
           expirationTime: "5m",
-          definePayload: ({ user }) => ({ email: user.email, name: user.name }),
+          definePayload: ({ user }) => ({
+            email: user.email,
+            name: user.name,
+          }),
         },
-        jwks: { keyPairConfig: { alg: "EdDSA", crv: "Ed25519" } },
+        jwks: {
+          keyPairConfig: {
+            alg: "EdDSA",
+            crv: "Ed25519",
+          },
+        },
       }),
     ],
   });
+
   return instance;
 }

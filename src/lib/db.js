@@ -1,5 +1,8 @@
 import "server-only";
+import dns from "node:dns/promises";
 import { MongoClient } from "mongodb";
+
+dns.setServers(["8.8.8.8", "1.1.1.1"]);
 
 export function getDatabase() {
   if (!process.env.MONGODB_URI)
