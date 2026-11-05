@@ -1,6 +1,6 @@
 <div align="center">
 
-## <img width="509" height="469" alt="BookNook emerald open-book logo" src="https://github.com/user-attachments/assets/04b4467a-469e-4b7a-97a4-8ac8cf8b1761" /> BookNook — Online Book Library
+## <img width="24" height="24" alt="BookNook emerald open-book logo" src="https://github.com/user-attachments/assets/04b4467a-469e-4b7a-97a4-8ac8cf8b1761" /> BookNook — Online Book Library
 
 ### Add a book. Borrow a book. Return a book.
 
