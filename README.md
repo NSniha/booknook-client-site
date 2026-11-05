@@ -5,7 +5,7 @@
     src="https://github.com/user-attachments/assets/04b4467a-469e-4b7a-97a4-8ac8cf8b1761"
     alt="BookNook Logo"
     width="32"
-    height="32"
+    height="30"
     align="absmiddle"
   />&nbsp;BookNook — Online Book Library
 </h1>
