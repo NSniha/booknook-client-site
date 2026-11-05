@@ -25,18 +25,10 @@ This repository is the **client application**, built with the Next.js App Router
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
-<table>
-  <tr>
-    <td align="center"><img src="docs/screenshots/home.png" alt="Home page" /><br /><sub><b>Home</b></sub></td>
-    <td align="center"><img src="docs/screenshots/catalog.png" alt="Book catalog" /><br /><sub><b>Catalog</b></sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="docs/screenshots/book-details.png" alt="Book details" /><br /><sub><b>Book Details</b></sub></td>
-    <td align="center"><img src="docs/screenshots/my-borrows.png" alt="My borrows" /><br /><sub><b>My Borrows</b></sub></td>
-  </tr>
-</table>
+<img width="1280" height="800" alt="booknok-preview" src="https://github.com/user-attachments/assets/af0bb2a7-273c-4f5b-8f5e-7827d5f9541c" />
+
 
 ---
 
@@ -45,31 +37,31 @@ This repository is the **client application**, built with the Next.js App Router
 <table>
   <tr>
     <td width="50%">
-      <b>🎨 Editorial Interface</b><br />
+      <b> Editorial Interface</b><br />
       Responsive design in white, soft beige and deep green, with an accessible dark/light toggle, a three-slide Swiper hero and 13 homepage sections.
     </td>
     <td width="50%">
-      <b>🔎 Smart Catalog</b><br />
+      <b> Smart Catalog</b><br />
       Search by title or author, filter by category and availability, sort results and browse with server-side pagination.
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <b>🔐 Secure Authentication</b><br />
+      <b> Secure Authentication</b><br />
       Email/password and Google sign-in with persistent BetterAuth sessions and safe return-to-page redirects.
     </td>
     <td width="50%">
-      <b>📚 Library Management</b><br />
+      <b> Library Management</b><br />
       Add, edit and delete your own books with real cover uploads, validated copy counts and owner-only controls.
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <b>🔁 Borrow and Return</b><br />
+      <b>Borrow and Return</b><br />
       Seven-day borrowing with due dates, no duplicate active borrows and atomic stock accounting handled by the API.
     </td>
     <td width="50%">
-      <b>✅ Polished UX</b><br />
+      <b>Polished UX</b><br />
       Toast feedback, loading spinners, empty and error states, per-route page titles, a custom 404 page and reduced-motion support.
     </td>
   </tr>
@@ -77,7 +69,7 @@ This repository is the **client application**, built with the Next.js App Router
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -99,7 +91,7 @@ This repository is the **client application**, built with the Next.js App Router
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 sequenceDiagram
@@ -121,23 +113,23 @@ BetterAuth runs inside Next.js at `/api/auth/[...all]` and provides `/api/auth/t
 
 ---
 
-## 🗺️ Routes
+## Routes
 
 | Route | Access |
 | --- | --- |
-| `/` | 🌐 Public |
-| `/books` | 🌐 Public |
-| `/login`, `/register` | 🌐 Public |
-| `/books/[id]` | 🔒 Signed-in reader |
-| `/add-book` | 🔒 Signed-in reader |
-| `/my-books` | 🔒 Signed-in reader |
-| `/my-books/[id]/edit` | 👤 Owner only |
-| `/my-borrows` | 🔒 Signed-in reader |
-| `/profile` | 🔒 Signed-in reader |
+| `/` | Public |
+| `/books` | Public |
+| `/login`, `/register` | Public |
+| `/books/[id]` | Signed-in reader |
+| `/add-book` | Signed-in reader |
+| `/my-books` | Signed-in reader |
+| `/my-books/[id]/edit` | Owner only |
+| `/my-borrows` | Signed-in reader |
+| `/profile` | Signed-in reader |
 
 ---
 
-## 🔐 Authentication
+## Authentication
 
 - Users and sessions are stored in MongoDB through the BetterAuth adapter.
 - Passwords need at least 6 characters with uppercase and lowercase letters, validated in both the form and the auth hook.
@@ -149,7 +141,7 @@ BetterAuth runs inside Next.js at `/api/auth/[...all]` and provides `/api/auth/t
 
 ---
 
-## 🎨 Design System
+## Design System
 
 <details>
 <summary><b>View typography and layout rules</b></summary>
@@ -173,7 +165,7 @@ The type scale lives in Tailwind theme tokens. Every homepage section is its own
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 booknook-client-site/
@@ -191,7 +183,7 @@ booknook-client-site/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
