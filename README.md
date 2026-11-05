@@ -1,12 +1,14 @@
 <div align="center">
 
-<p align="center">
+<h1 align="center">
   <img
     src="https://github.com/user-attachments/assets/04b4467a-469e-4b7a-97a4-8ac8cf8b1761"
     alt="BookNook Logo"
-    width="320"
+    width="45"
+    align="middle"
   />
-</p>
+  BookNook — Online Book Library
+</h1>
 
 <h1 align="center">BookNook — Online Book Library</h1>
 
