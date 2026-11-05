@@ -1,6 +1,6 @@
 <div align="center">
 
-###BookNook
+## <img width="509" height="469" alt="BookNook emerald open-book logo" src="https://github.com/user-attachments/assets/04b4467a-469e-4b7a-97a4-8ac8cf8b1761" /> BookNook — Online Book Library
 
 ### Add a book. Borrow a book. Return a book.
 
@@ -279,7 +279,5 @@ Front-End Developer · Design-to-Code Specialist
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nobonita-saha-niha-04b501214/)
 
 ⭐ If you like this project, please consider giving it a star.
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1F4D3A,100:4E8F6B&height=120&section=footer" alt="" width="100%" />
 
 </div>
