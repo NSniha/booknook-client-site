@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1F4D3A,100:4E8F6B&height=220&section=header&text=BookNook&fontSize=64&fontColor=ffffff&desc=A%20reader-powered%20online%20library&descSize=20&descAlignY=68" alt="BookNook banner" width="100%" />
+###BookNook
 
 ### Add a book. Borrow a book. Return a book.
 
